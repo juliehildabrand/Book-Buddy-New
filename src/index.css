@@ -44,15 +44,17 @@ h1 {
 }
 
 h2{
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
   margin: 5px;
 }
 
-h4{
+h3{
   color: rgb(255, 255, 255); 
   text-align: center;
+  font-size: 20px;
+  margin: 5px;
 }
 
 form{
@@ -99,25 +101,12 @@ img{
   justify-content: space-between; 
 }
 
-#book-cards{
+ul{
   display: flex;
   flex-flow: row wrap;
   list-style: none;
 }
 
-#book-card{
-  color: aliceblue; 
-  flex: 1 1 300px;
-  max-width: 300px;
-  margin: 5px;
-  padding: 10px;
-  /* border: 1px solid #ccc; */
-  /* border-radius: 10px; */
-  background-color: rgba(207, 181, 133, 0.85);
-  font-size: 30px;
-  text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
 
 #single-card{
   color: aliceblue; 
@@ -127,7 +116,7 @@ img{
   padding: 10px;
   /* border: 1px solid #ccc; */
   /* border-radius: 10px; */
-  background-color: rgb(169 169 169 / 85%);
+  background-color: rgba(207, 181, 133, 0.85);
   font-size: 30px;
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;

@@ -26,10 +26,11 @@ const Register = ({Register}) => {
       <input
       placeholder='password'
       value={ password }
+      type="password"
       onChange={ event => setPassword(event.target.value )}
       />
 
-      <button>Register!</button>
+      <button>Register</button>
 
     </form>
     </>

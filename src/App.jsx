@@ -129,6 +129,7 @@ function App() {
         <h1>BOOK BUDDY</h1>
         <nav>
           <Link to='/books'>Books</Link>
+          <Link to='/account'>My Bookshelf</Link>
           {
             auth.id ? (
               <Link to='/account'>Account</Link>
