@@ -30,6 +30,9 @@ function App() {
     }
   }, []);
 
+  //attempting checkout
+  
+
 
 
 
@@ -136,6 +139,9 @@ function App() {
           }
         </nav>
 
+        <div>
+          Welcome! { auth.email }
+        </div>
         {
           auth.id ? (
             <button onClick={ logout }>LOGOUT</button>

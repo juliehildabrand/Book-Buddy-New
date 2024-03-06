@@ -109,13 +109,14 @@ ul{
 
 
 #single-card{
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
   color: aliceblue; 
   flex: 1 1 300px;
   max-width: 400px;
   margin: 10px;
   padding: 10px;
-  /* border: 1px solid #ccc; */
-  /* border-radius: 10px; */
   background-color: rgba(207, 181, 133, 0.85);
   font-size: 30px;
   text-align: center;

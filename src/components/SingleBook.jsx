@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
-const SingleBook = ({ books, auth })=> {
+const SingleBook = ({ books, auth, checkout })=> {
   const params = useParams();
   const navigate = useNavigate();
   const id = +params.id;
@@ -19,7 +19,7 @@ const SingleBook = ({ books, auth })=> {
       <button onClick={() => navigate("/books")}>RETURN TO LIBRARY</button>
       {
       auth.id ? (
-        <button onClick={() => {}}>CHECKOUT BOOK</button>
+        <button onClick={() => checkout(book)}>CHECKOUT BOOK</button>
       ) : (null)
       }  
     </div>

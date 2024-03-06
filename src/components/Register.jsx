@@ -1,8 +1,10 @@
 import { useState } from 'react'
+import { Navigate } from 'react-router-dom';
 
 const Register = ({register}) => {
   const[email, setEmail] = useState("");
   const[password, setPassword] = useState("");
+  const[error, setError] = useState("");
 
   const submit = async(event) => {
     event.preventDefault();
@@ -11,8 +13,15 @@ const Register = ({register}) => {
       email, password 
     };
 
-    await register(credentials);
+    try {
+      await register(credentials);
+      Navigate('/account');
+    }
+    catch(error) {
+      setError(error.message);
+    }
   }
+
 
   return(
     <>

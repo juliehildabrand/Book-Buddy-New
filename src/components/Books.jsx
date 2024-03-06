@@ -7,7 +7,8 @@ const Books = ({ books })=> {
   return (
 
    <>
-      <input value={ params.term || "" } onChange={ ev => navigate(ev.target.value ? `/books/search/${ev.target.value}` : '/books')}/>
+      <h2>FULL LIBRARY</h2>
+      <input placeholder="search books..." value={ params.term || "" } onChange={ ev => navigate(ev.target.value ? `/books/search/${ev.target.value}` : '/books')}/>
 
       <ul>
         {
