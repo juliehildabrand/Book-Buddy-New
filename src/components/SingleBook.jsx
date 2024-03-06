@@ -1,7 +1,9 @@
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-const SingleBook = ({ books })=> {
+const SingleBook = ({ books, auth })=> {
   const params = useParams();
+  const navigate = useNavigate();
   const id = +params.id;
   const book = books.find(book => book.id === id);
   if(!book){
@@ -14,7 +16,14 @@ const SingleBook = ({ books })=> {
       <img src={book.coverimage} alt={`${book.img}'s image`} width="300" height="300" />
       <br />
       <p>{book.description}</p>
+      <button onClick={() => navigate("/books")}>RETURN TO LIBRARY</button>
+      {
+      auth.id ? (
+        <button onClick={() => {}}>CHECKOUT BOOK</button>
+      ) : (null)
+      }  
     </div>
+    
   );
 };
 

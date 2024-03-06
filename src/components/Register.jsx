@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const Register = ({Register}) => {
+const Register = ({register}) => {
   const[email, setEmail] = useState("");
   const[password, setPassword] = useState("");
 
@@ -11,7 +11,7 @@ const Register = ({Register}) => {
       email, password 
     };
 
-    await Register(credentials);
+    await register(credentials);
   }
 
   return(
@@ -30,7 +30,7 @@ const Register = ({Register}) => {
       onChange={ event => setPassword(event.target.value )}
       />
 
-      <button>Register</button>
+      <button>REGISTER</button>
 
     </form>
     </>

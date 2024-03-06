@@ -25,7 +25,7 @@ const Login = ({ login })=> {
         type="password"
         onChange={ ev => setPassword(ev.target.value )}
       />
-      <button>Login</button>
+      <button>LOGIN</button>
     </form>
   );
 };

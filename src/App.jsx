@@ -57,9 +57,9 @@ function App() {
    let json = await response.json();
    if(response.ok){
     const token = json.token;
-    window.localStorage.setItem('token, token');
+    window.localStorage.setItem('token', token);
     response = await fetch('https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api/users/me', {
-      header: {
+      headers: {
         Authorization: `Bearer ${token}`
       }
     });
@@ -85,9 +85,9 @@ function App() {
     let json = await response.json();
     if(response.ok){
      const token = json.token;
-     window.localStorage.setItem('token, token');
+     window.localStorage.setItem('token', token);
      response = await fetch('https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api/users/me', {
-       header: {
+       headers: {
          Authorization: `Bearer ${token}`
        }
      });
@@ -128,30 +128,30 @@ function App() {
       <div>
         <h1>BOOK BUDDY</h1>
         <nav>
-          <Link to='/books'>Books</Link>
-          <Link to='/account'>My Bookshelf</Link>
+          <Link to='/books'>BOOKS</Link>
           {
             auth.id ? (
-              <Link to='/account'>Account</Link>
+              <Link to='/account'>MY BOOKSHELF</Link>
             ) : (null)
           }
         </nav>
 
         {
           auth.id ? (
-            <button onClick={ logout }>User</button>
+            <button onClick={ logout }>LOGOUT</button>
           ) : 
           (
+            <>
             <Login login= { login }/>
+            <Register register = { register }/>
+            </>
           )
         }
-
-        <Register register = { register }/>
 
       </div>
 
       <Routes>
-        <Route path='/books/:id' element={ <SingleBook books={ books }/> } />
+        <Route path='/books/:id' element={ <SingleBook books={ books } auth={auth}/> } />
         <Route
         path='/books'
         element={
